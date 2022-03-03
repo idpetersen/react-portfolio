@@ -1,0 +1,46 @@
+.project-image{
+    width: 100%;
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease;
+    height: auto;
+}
+
+.text-wrapper{
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: white;
+    position: relative;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.img-wrapper{
+    width: 400px;
+    height: 280px;
+}
+
+.img-wrapper:hover .text-wrapper{
+    opacity: 0.9;
+}
+
+.img-wrapper:hover .project-image{
+    opacity: 0.7;
+}
+
+.card-wrapper{
+    padding:40px 20px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.gitHub-logo{
+    height: 50px;
+    width: 50px;
+}
