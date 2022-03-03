@@ -1,9 +1,9 @@
 import React from "react";
 import MyResume from '../assets/resume.png'
-
+import '../styles/Resume.css'
 function Resume(){
     return (
-        <section>
+        <section className="main-body">
                 <h1>Resume</h1>
                 <br/>
                 <a href={MyResume} download><h4>Downlad my resume</h4></a>
