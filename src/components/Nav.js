@@ -1,8 +1,10 @@
 import React from 'react';
+import '../styles/Nav.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Nav ({ currentPage, handlePageChange }) {
     return (
-        <ul className='nav'>
+        <ul className='nav nav-style'>
             <li className='nav-item'>
                 <a href='#About'
                     onClick={()=> handlePageChange('About')}

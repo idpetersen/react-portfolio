@@ -1,15 +1,18 @@
 import React from "react";
-
+import '../styles/About.css'
+import profileImage from '../assets/profileImage.png'
 function About() {
   return (
     <section>
-      <div>
-        <center>
-          {/* <img src={profileImage} alt="picture of me"></img> */}
-        </center>
-        <p>Isaac Petersen</p>
-        <h2>About me</h2>
-        <p>
+      <div className="page-style">
+        <div className="name-wrapper">
+        <h3>Isaac Petersen</h3>
+        </div>
+        <div className="image-wrapper">
+          <img className="profile-image" src={profileImage} alt="picture of me"></img>
+        </div>
+        <h2 className="about-me">About me</h2>
+        <p className="about-text">
           I'm baby esse green juice celiac shoreditch 90's asymmetrical
           letterpress hashtag kickstarter food truck est quis. Try-hard street
           art taiyaki dolore. Ugh raclette scenester, XOXO tilde craft beer yr
@@ -32,6 +35,7 @@ function About() {
           chicken cloud bread minim butcher fugiat. Dummy text? More like dummy
           thicc text, amirite?
         </p>
+
       </div>
     </section>
   );

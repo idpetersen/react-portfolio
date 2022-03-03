@@ -1,20 +1,17 @@
 import { useForm } from 'react-hook-form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const Contact = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors }
   } = useForm();
   
   const onSubmit = async (data) => {
-    const { name, email, subject, message } = data;
+    const { name, email, message } = data;
     
-    console.log('Name: ', name);
-    console.log('Email: ', email);
-    console.log('Message: ', message);
   };
 
   return (
@@ -47,7 +44,7 @@ const Contact = () => {
                       name='email'
                       {...register('email', {
                         required: true,
-                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                        pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                       })}
                       className='form-control formInput'
                       placeholder='Email address'

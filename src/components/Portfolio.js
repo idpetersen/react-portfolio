@@ -7,13 +7,12 @@ function Card (props){
     return (
         <div>
             <div className="card img-wrapper">
-                <img className='project-image' src={props.image}>
+                <img className='project-image' src={props.image} alt='project'/>
                 <div className="text-wrapper">
                     <p className='top-text'>{props.name}</p>
-                    <p className='bottom0-text'>{props.methods}</p>
-                    <a href={props.github}><img className='gitHub-logo' src='../assets/github.png' alt='github logo'></img></a>
+                    <p className='bottom-text'>{props.methods}</p>
+                    <a href={props.github}><img className='gitHub-logo' src='../assets/github.png' alt='github logo'/></a>
                 </div>
-                </img>
             </div>
         </div>
     )
@@ -34,6 +33,7 @@ function Projects (){
 
         <Wrapper>
             {projects.map((project) =>{
+                return (
                 <Card
                 name={project.name}
                 key={project.id}
@@ -41,6 +41,7 @@ function Projects (){
                 methods={project.methods}
                 github={project.github}
                 />
+                )
             })}
         </Wrapper>
     </>

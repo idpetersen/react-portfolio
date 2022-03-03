@@ -1,10 +1,12 @@
 import React, {useState} from "react";
+import Hero from '../assets/hero-banner.png'
 import Nav from './Nav';
 import Footer from './Footer';
 import About from './About';
 import Contact from './Contact';
-import Portfolio from './Portfolio';
+import Projects from './Portfolio';
 import Resume from "./Resume";
+import '../styles/Main.css'
 
 function Main () {
     const [currentPage, setCurrentPage] = useState('About');
@@ -14,7 +16,7 @@ function Main () {
           return <About />;
         }
         if (currentPage === 'Portfolio') {
-          return <Portfolio />;
+          return <Projects />;
         }
         if (currentPage === 'Resume') {
           return <Resume />;
@@ -27,6 +29,9 @@ function Main () {
       return (
         <div>
           <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+          <div>
+            <img src={Hero} alt="banner" className="hero"/>
+          </div>
           {renderPage()}
           <Footer/>
         </div>
