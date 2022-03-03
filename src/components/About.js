@@ -5,7 +5,7 @@ function About() {
     <section>
       <div>
         <center>
-          <img src={profileImage} alt="picture of me"></img>
+          {/* <img src={profileImage} alt="picture of me"></img> */}
         </center>
         <p>Isaac Petersen</p>
         <h2>About me</h2>
@@ -36,3 +36,5 @@ function About() {
     </section>
   );
 }
+
+export default About

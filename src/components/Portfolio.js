@@ -26,6 +26,7 @@ function Wrapper(props){
 }
 
 function Projects (){
+    return(
     <>
     <div className="main-body">
     <h1 className="title">Projects</h1>
@@ -43,6 +44,7 @@ function Projects (){
             })}
         </Wrapper>
     </>
+    )
 }
 
 export default Projects

@@ -1,9 +1,11 @@
-import Nav from './components/Nav'
+import React from 'react';
+import Main from './components/Main'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-<Nav />
+<Main />
   );
 }
 
