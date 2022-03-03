@@ -1,5 +1,6 @@
 import React from "react";
 import '../assets/Footer.css'
+
 function Footer () {
     return(
         <div className="icon-wrapper">
@@ -8,3 +9,5 @@ function Footer () {
         </div>
     )
 }
+
+export default Footer
