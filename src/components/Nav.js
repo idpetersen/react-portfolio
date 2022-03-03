@@ -7,10 +7,10 @@ function Nav (props) {
                 <a href='#About' className={props.currentPage === tab ? 'nav-link active' : 'nav-link'}>About</a>
             </li>
             <li className='nav-item'>
-                <a href='#About' className={props.currentPage === tab ? 'nav-link active' : 'nav-link'}>Portfolio</a>
+                <a href='#Portfolio' className={props.currentPage === tab ? 'nav-link active' : 'nav-link'}>Portfolio</a>
             </li>
             <li className='nav-item'>
-                <a href='#About' className={props.currentPage === tab ? 'nav-link active' : 'nav-link'}>Contact</a>
+                <a href='#Contact' className={props.currentPage === tab ? 'nav-link active' : 'nav-link'}>Contact</a>
             </li>
         </ul>
     )

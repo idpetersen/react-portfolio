@@ -1,0 +1,10 @@
+.icon{
+    height: 50px;
+    width: 50px;
+}
+
+.icon-wrapper{
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+}
