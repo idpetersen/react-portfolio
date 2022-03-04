@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Nav ({ currentPage, handlePageChange }) {
     return (
-        <ul className='nav nav-style'>
+        <ul className='nav nav-style nav-tabs'>
             <li className='nav-item'>
                 <a href='#About'
                     onClick={()=> handlePageChange('About')}

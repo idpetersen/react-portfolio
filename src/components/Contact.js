@@ -1,26 +1,28 @@
 import { useForm } from 'react-hook-form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../styles/Contact.css'
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm();
   
-  const onSubmit = async (data) => {
-    const { name, email, message } = data;
-    
+  const onSubmit = () => {
+    reset()
+    window.alert('Your message has been submitted')
   };
 
   return (
-    <div className='ContactForm'>
+    <div className='contact-form'>
+      <h1 className='contact-me'>Contact Me</h1>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>
-            <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+            <div>
+              <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <div className='row formRow'>
                   <div className='col-6'>
                     <input
@@ -28,10 +30,6 @@ const Contact = () => {
                       name='name'
                       {...register('name', {
                         required: { value: true, message: 'Please enter your name' },
-                        maxLength: {
-                          value: 30,
-                          message: 'Please use 30 characters or less'
-                        }
                       })}
                       className='form-control formInput'
                       placeholder='Name'
@@ -44,7 +42,7 @@ const Contact = () => {
                       name='email'
                       {...register('email', {
                         required: true,
-                        pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                       })}
                       className='form-control formInput'
                       placeholder='Email address'
@@ -54,8 +52,8 @@ const Contact = () => {
                     )}
                   </div>
                 </div>
-                <div className='row formRow'>
-                  <div className='col'>
+                <div>
+                  <div>
                     <textarea
                       rows={3}
                       name='message'
@@ -65,7 +63,7 @@ const Contact = () => {
                       className='form-control formInput'
                       placeholder='Message'
                     ></textarea>
-                    {errors.message && <span className='errorMessage'>Please enter a message</span>}
+                    {errors.message && <span className='errorMessage'>Please enter something</span>}
                   </div>
                 </div>
                 <button className='submit-btn' type='submit'>
