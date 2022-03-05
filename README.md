@@ -5,6 +5,8 @@
 This project utilized React to build a responsive portfolio page. There are four sections; about (a little about me), portfolio (some of my works), contact (responive form utilizing react-hook-form), and a resume page. 
 
 This project helped me understand the basics of how to use react. 
+
+[Deployed Site](https://fast-badlands-35522.herokuapp.com/)
 ## Table of Contents
 - [Installation](#installation)
 - [Available Scripts](#available-scripts)
