@@ -17,6 +17,7 @@
 }
 .page-style{
     background-color: rgb(0, 202, 0);
+    
 }
 
 .about-me{
@@ -27,5 +28,11 @@
 
 .about-text{
     padding: 40px;
+    width: 50%;
     margin: 0px;
+}
+
+.about-wrapper{
+    display: flex;
+    justify-content: center;
 }
